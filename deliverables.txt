@@ -1,0 +1,7 @@
+* Filtering function:
+    - by title
+    - by location
+    - by full-time position or part-time
+* Page modification to device
+* Index Page
+* Hover state

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+    <title>devjobs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <link href="amalstyles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="headerbar">
+
+        <h3 class="headerlabel">devjobs</h3>
+        <div class="pageiconstate">
+            <img src="icons/sunicon.png">
+            <button id="modeButton" class="mode-button" aria-label="Toggle Mode">
+                <img id="toggleIcon" class="toggle-icon" src="buttons/toggle-on.svg">
+            </button>
+            <img src="icons/nighticon.png">
+        </div>
+    </div>
+    <div class="searchbarencasing">
+        <div class="searchbar">
+            <div class="column"><!--typingsearch-->
+                <img class="search-icon" src="devjobs-web-app/starter-code/assets/desktop/icon-search.svg" alt="search icon"/>
+                <input class="job-search" type="text" placeholder="Filter by title, companies, expertise..." />
+            </div>
+            <div class="division"></div>
+            <div class="column"><!--locationsearch-->
+                <img class="locationicon" src="devjobs-web-app/starter-code/assets/desktop/icon-location.svg" alt="location icon"/>
+                <input class="location-search" type="text" placeholder="Filter by location..." />
+            </div>
+            <div class="division"></div>
+            <div class="column"><!--fulltimeonlyfilter-->
+                <input class="fulltime" id="checkerbox" type="checkbox" name="filter" value="Full Time Only" checked> <label for=" Full Time Only">Full Time Only</label>
+                <button class="filtersearchbutton" id="filtersearchbutton"><h3>Search</h3></button>
+            </div>
+        </div>
+    </div>    
+    <div class="main">
+        <section class="joblist" id="jobchoice"></section>
+        <button type="button" class="morebutton" id="forMore"><h2>Load more</h2></button>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>
