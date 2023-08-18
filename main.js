@@ -587,7 +587,9 @@ const jobsData= [
     `;
   }
 
-
+  // function detailedJobInfo(){
+  //   document.getElementById()
+  // }
   
   // Search button
   const searchButton = document.getElementById('filtersearchbutton');

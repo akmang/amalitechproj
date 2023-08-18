@@ -484,13 +484,20 @@ const jobsData= [
   const particularjobChoice = document.getElementById('particularjobchoice');
     particularjobChoice.innerHTML = filteredJobs
       .slice(0, count)
-      .map(jobTemplate)
+      .map(detailsTemplate)
       .join('');
   
+
+  // Company site button
+  document.getElementById("redirectButton").addEventListener("click", function() {
+    // Redirect to the specified URL
+    window.location.href = jobsData.website;
+  }
+  );
   
   function detailsTemplate(job){
     return`
-    <div class="jobdetailsdisplay">
+    <div class="jobdetailsdisplay" id="jobdetailsdisplay">
       <h7 class="jobinfo">${job.postedAt}. ${job.contract}</h7>
       <br>
       <h3 class="jobtitle">${job.position}</h3>
@@ -508,5 +515,29 @@ const jobsData= [
       <h3>What You Will Do</h3><br>
       <p>${job.role.content}</p>
       <p>${job.role.items}</p>
-      `
+      `;
   }
+
+
+  function companySiteButtonfunc(){
+    return`
+    <a href="${job.website}">
+    <button class="csitebutton" id="csitebutton"><h3>Company Site</h3></button>
+    </a>
+    `;
+  }
+
+  // Company site button
+  document.addEventListener('DOMContentLoaded', () => {
+    const siteButton = document.getElementById('siteButton');
+    siteButton.innerHTML = companySiteButtonfunc();
+});
+  
+
+  const particularjobChoice = document.getElementById('particularjobchoice');
+    const displayedJobsCount = particularjobChoice.getElementsByClassName('jobdetailsdisplay').length;
+  
+    if (remainingJobs.length > 0) {
+      particularjobChoice.innerHTML += remainingJobs.map(jobTemplate).join('');
+    }
+  

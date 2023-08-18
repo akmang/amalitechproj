@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Site Button Test</title>
+</head>
+<body>
+    <div id="buttonContainer"></div>
+
+    <script>
+        // Your provided JavaScript code goes here
+        function companySiteButtonfunc() {
+            return `
+                <a href="${job.website}" target="_blank">
+                    <button class="csitebutton" id="csitebutton"><h3>Company Site</h3></button>
+                </a>
+            `;
+        }
+
+        // Replace 'job' with the actual JSON object containing 'website' field
+        const job = {
+            website: "https://example.com/scoot"
+        };
+
+        // Immediately display the button without the need for a click
+        const buttonContainer = document.getElementById('buttonContainer');
+        buttonContainer.innerHTML = companySiteButtonfunc();
+    </script>
+</body>
+</html>
